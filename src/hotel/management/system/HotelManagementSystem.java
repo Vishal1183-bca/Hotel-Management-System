@@ -24,6 +24,7 @@ public class HotelManagementSystem extends JFrame implements ActionListener{
         button.setFont(new Font("sarif",Font.BOLD,30));
         button.setBackground(Color.WHITE);
         button.setFocusable(false);
+        button.setForeground(new Color(225,51,51));
         button.setBounds(1120,700,250,55);
         button.addActionListener(this);
         
@@ -81,7 +82,9 @@ public class HotelManagementSystem extends JFrame implements ActionListener{
     {
           if(e.getSource() == button)
           {
-               new Login().setVisible(true);
+               Login login = new Login();
+               login.setVisible(true);
+               login.setLocationRelativeTo(null);
                 this.setVisible(false);
           }
     }
